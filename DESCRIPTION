@@ -1,6 +1,7 @@
 Package: abc.mse
 Type: R Package
 Title: Approximate Bayesian Computation
+Version: 1.0.0
 Author: Zachary Higa
 Maintainer: Zachary Higa <higa2426@vandals.uidaho.edu>
 Description: More about what it does (maybe more than one line)
