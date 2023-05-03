@@ -8,7 +8,7 @@
 #' @param post.est2     The point estimates of the posterior distribution parameter 2
 #' @param plot          If true, will plot a histogram of the posterior distribution of the parameter(s)
 #'
-#' @return  The mean-squared error(s) for the posterior distribution parameter(s)
+#' @return  The mean-squared error(s) for the posterior distribution parameter(s) and the estimate of the parameter(s)
 #'
 #' @examples  estimates = cauchy_abc(nsim = 100)
 #'  mse_abc(true.par1 = 0, post.est1 = estimates$location, true.par2 = 1.5, post.est2 = estimates$scale, plot = T)
