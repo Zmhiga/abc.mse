@@ -47,8 +47,8 @@ gumbel_abc = function(true.loc = 0, true.sc = 1.5, prior.loc = c(-5,5), prior.sc
 
     }
 
-    posterior.loc.estimates[i] = mean(posterior.loc)  # storing point estimates of location parameter
-    posterior.sc.estimates[i] = mean(posterior.sc)  # storing point estimates of scale parameter
+    posterior.loc.estimates[i] = mean(posterior.loc, na.rm = T)  # storing point estimates of location parameter
+    posterior.sc.estimates[i] = mean(posterior.sc, na.rm = T)  # storing point estimates of scale parameter
 
   }
 
