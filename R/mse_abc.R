@@ -18,8 +18,8 @@ mse_abc = function(true.par1, true.par2 = NULL, post.est1, post.est2 = NULL, plo
 
   if (is.null(true.par2) == T & is.null(post.est2) == T) { # if our posterior distribution has only one parameter
 
-    estimator = mean(post.est1) # estimate of the parameter of the posterior distribution
-    variance = var(post.est1) # variance of the parameter of the posterior distribution
+    estimator = mean(post.est1, na.rm = T) # estimate of the parameter of the posterior distribution
+    variance = var(post.est1, na.rm = T) # variance of the parameter of the posterior distribution
     MSE = (estimator - true.par1)^2 + variance  # MSE of the parameter of the posterior distribution
 
     output = list("Estimator" = estimator, "MSE" = MSE) # the estimate and MSE returned from function
@@ -32,12 +32,12 @@ mse_abc = function(true.par1, true.par2 = NULL, post.est1, post.est2 = NULL, plo
 
   } else if (is.null(true.par2) == F & is.null(post.est2) == F) { # if our posterior distribution has two parameters
 
-    estimator1 = mean(post.est1)  # estimate of parameter 1 of the posterior distribution
-    variance1 = var(post.est1)  # variance of parameter 1 of the posterior distribution
+    estimator1 = mean(post.est1, na.rm = T)  # estimate of parameter 1 of the posterior distribution
+    variance1 = var(post.est1, na.rm = T)  # variance of parameter 1 of the posterior distribution
     MSE1 = (estimator1 - true.par1)^2 + variance1  # MSE of parameter 1 of the posterior distribution
 
-    estimator2 = mean(post.est2)  # estimate of parameter 2 of the posterior distribution
-    variance2 = var(post.est2)  # variance of parameter 2 of the posterior distribution
+    estimator2 = mean(post.est2, na.rm = T)  # estimate of parameter 2 of the posterior distribution
+    variance2 = var(post.est2, na.rm = T)  # variance of parameter 2 of the posterior distribution
     MSE2 = (estimator2 - true.par2)^2 + variance2  # MSE of parameter 2 of the posterior distribution
 
     output = list("Estimator_1" = estimator1,"MSE_1" = MSE1, "Estimator_2" = estimator2, "MSE_2" = MSE2)
