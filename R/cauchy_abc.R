@@ -17,7 +17,7 @@
 #' @examples cauchy_abc(true.loc = 1, true.sc = 2, prior.loc = c(-5,5), prior.sc = c(0.5,3.5), size = 10^3, nsim = 100, niter = 10^3, epsilon = 0.01)
 
 
-cauchy_abc = function(true.loc = 0, true.sc = 1.5, prior.loc = c(-5,5), prior.sc = c(0,3), size = 10^3, nsim = 10^3, niter = 10^4, epsilon = 0.01) {
+cauchy_abc = function(true.loc = 0, true.sc = 1.5, prior.loc = c(-5,5), prior.sc = c(0.5,3), size = 10^3, nsim = 10^3, niter = 10^4, epsilon = 0.01) {
 
   posterior.loc.estimates = vector(length = nsim) # empty vector to store location point estimates
 
