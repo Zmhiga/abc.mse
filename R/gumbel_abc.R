@@ -14,7 +14,7 @@
 #'
 #' @return  The point estimates for the posterior distribution parameters, location and scale
 #'
-#' @examples gumbel_abc(true.loc = 1, true.sc = 2, prior.loc = c(-5,5), prior.sc = c(0.5,3.5), size = 10^3, nsim = 100, niter = 10^3, epsilon = 0.01)
+#' @examples gumbel_abc(true.loc = 1, true.sc = 2, prior.loc = c(-5,5), prior.sc = c(0.5,3.5), size = 10^3, nsim = 100, niter = 10^4, epsilon = 0.01)
 
 
 gumbel_abc = function(true.loc = 0, true.sc = 1.5, prior.loc = c(-5,5), prior.sc = c(0.5,3.5), size = 10^3, nsim = 10^3, niter = 10^4, epsilon = 0.01, plot = T) {
