@@ -24,7 +24,7 @@ mse_abc(
 \item{plot}{If true, will plot a histogram of the posterior point estimates of the parameter(s)}
 }
 \value{
-The mean-squared error(s) for the posterior distribution parameter(s)
+The mean-squared error(s) for the posterior distribution parameter(s) and the estimate of the parameter(s)
 }
 \description{
 Calculates the mean-squared error for the posterior distribution parameter(s) and plots the posterior distribution of the parameter(s)
