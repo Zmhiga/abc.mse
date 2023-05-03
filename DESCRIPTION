@@ -4,8 +4,16 @@ Title: Approximate Bayesian Computation
 Version: 1.0.0
 Author: Zachary Higa
 Maintainer: Zachary Higa <higa2426@vandals.uidaho.edu>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
+Description: The purpose of this R package is to illustrate Approximate Bayesian Computation (ABC), a simulation-based inference method used to obtain the 
+posterior distribution of parameters given the data. In this R package, we approximate a joint likelihood of the data by simulating the prior probability 
+for the parameter(s) of interest, generate a data set under the parameter(s), and then compare a summary statistic of this data set to the summary statistic 
+of the observed data. We accept the value of the simulated parameter as if it were from the posterior if the difference between the simulated and observed 
+summary statistic are within some error (say epsilon). We iterate through this process a number of times, then we take the mean of the accepted values to 
+be a point estimate of the parameter(s).    For each simulation of the data generating functions, we generate one point
+estimate of the parameter(s), and so the number of point estimates of the parameter(s) that we obtain is the same as the number of simulations we ran.
+Taking the mean of these posterior point estimates gives us an ABC estimator, and we calculate the variance of the ABC estimator as well. Then we can 
+calculate the mean-square error to assess the approximation of the estimator. In this program, we find the ABC estimators of exponential distributions, 
+Cauchy distributions (heavier-tailed distribution), and Gumbel distributions (lighter-tailed distribution).
 License: What license is it under?
 Encoding: UTF-8
 LazyData: true
