@@ -9,21 +9,17 @@ mse_abc(
   true.par2 = NULL,
   post.est1,
   post.est2 = NULL,
-  distribution = c("exp", "cauchy", "gumbel"),
-  plot_bounds = c(0, 10),
-  plot_length = 100
+  plot = T
 )
 }
 \arguments{
-\item{true.par1}{The true value of parameter 1 (location parameter for Gumbel and Cauchy)}
+\item{true.par1}{The true value of parameter 1}
 
-\item{true.par2}{If applicable, the true value of parameter 2 (scale parameter for Gumbel and Cauchy)}
+\item{true.par2}{If applicable, the true value of parameter 2}
 
-\item{post.est1}{The point estimates of the posterior distribution parameter 1 (location parameter for Gumbel and Cauchy)}
+\item{post.est1}{The point estimates of the posterior distribution parameter 1}
 
-\item{post.est2}{The point estimates of the posterior distribution parameter 2 (scale parameter for Gumbel and Cauchy)}
-
-\item{distribution}{Select whether the distribution of interest is Exponential ("exp"), Gumbel ("gumbel"), or Cauchy ("cauchy)}
+\item{post.est2}{The point estimates of the posterior distribution parameter 2}
 
 \item{plot}{If true, will plot a histogram of the posterior point estimates of the parameter(s)}
 }
@@ -31,10 +27,9 @@ mse_abc(
 The mean-squared error(s) for the posterior distribution parameter(s)
 }
 \description{
-Calculates the mean-squared error for the posterior distribution parameter(s) and plots the pdf of the posterior distribution
-               along with the histogram of the parameter(s) estimates
+Calculates the mean-squared error for the posterior distribution parameter(s) and plots the posterior distribution of the parameter(s)
 }
 \examples{
  estimates = cauchy_abc(nsim = 100)
-           mse_abc(true.par1 = 0, post.est1 = estimates$location, true.par2 = 1.5, post.est2 = estimates$scale, distribution = "cauchy", plot_bounds = (-5,5), plot_length = 100)
+           mse_abc(true.par1 = 0, post.est1 = estimates$location, true.par2 = 1.5, post.est2 = estimates$scale, plot = T)
 }
